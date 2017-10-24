@@ -4,7 +4,7 @@ class ColumnName extends Component {
   render() {
     return (
       <div className="column-name">
-        <p>Name</p>
+        <p>{this.props.name}</p>
       </div>
     );
   }

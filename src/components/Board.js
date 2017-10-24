@@ -6,14 +6,14 @@ class Board extends Component {
     super ()
 
     this.state = {
-      columns: [<Column />, <Column />, <Column />, <Column />]
+      columns: [{name: "first column"}, {name: "second column"}, {name: "third column"}, {name: "fourth column"}]
     }
   }
   render() {
     return (
       <div className="board">
         {this.state.columns.map(column => {
-          return column
+          return <Column name={column.name} />
         })}
       </div>
     );

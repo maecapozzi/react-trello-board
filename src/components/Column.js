@@ -7,18 +7,17 @@ class Column extends Component {
     super ()
 
     this.state = {
-      cards: ['first', 'second']
+      cards: []
     }
 
     this.handleClick = this.handleClick.bind(this)
   }
 
   handleClick () {
-    const cards = [];
+    const cards = this.state.cards;
     const result = window.prompt('Please add a card');
     if (result != null) {
-      cards.push(this.state.cards);
-      cards.push(<Card name={result} />)
+      cards.push(result)
       this.setState({ cards })
     }
   }
@@ -26,7 +25,8 @@ class Column extends Component {
   render() {
     return (
       <div className="column">
-        <ColumnName className="column-name"/>
+        {console.log(this.props.name)}
+        <ColumnName name={this.props.name} className="column-name"/>
         {this.state.cards.map((card) => {
           return <Card name={card} />
         })}
