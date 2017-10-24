@@ -30,7 +30,7 @@ class Column extends Component {
         {this.state.cards.map((card) => {
           return <Card name={card} />
         })}
-        <button onClick={this.handleClick}>Add a card</button>
+        <button className="column__button" onClick={this.handleClick}>Add a card</button>
       </div>
     );
   }

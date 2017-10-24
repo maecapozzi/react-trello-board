@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font-family: "Roboto";
   background-color: #D8D8E6;
 }
 
@@ -32,4 +32,11 @@ body {
 .column-name {
   background-color: #B0A5DE;
   color: white;
+}
+
+.column__button {
+  background-color: transparent;
+  color: #ffffff;
+  border: none;
+  margin-top: 10px;
 }
